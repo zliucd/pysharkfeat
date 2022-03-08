@@ -87,7 +87,7 @@ for feat in stream_feats :
 ### Performance consideration
 
 #### Time
-Pysharkfeat is built on tshark, which may incur substantial overhead. The following table shows some test results on a Mac OSX(CPU i5, 16GB RAM).
+Pysharkfeat is built on tshark, which may incur substantial overhead. The following table shows some test results for meata freatures on OSX(CPU i5, 16GB RAM).
 
 | pcap name                                                | pcap size | num of TLS streams | time(sec) |
 |----------------------------------------------------------|-----------|--------------------|-----------|
