@@ -1,7 +1,7 @@
 """
 GPL V3 license
 
-Copyright (C) 2022 Zhi Liu<cowliucd@gmail.com>
+Copyright (C) 2022 Zhi Liu<zliucd66@gmail.com>
 
 util.py
 This file is part of Pysharkfeat, a feature extraction tool from encrypted traffic. See LICENSE for more information.
