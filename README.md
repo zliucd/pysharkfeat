@@ -22,9 +22,9 @@ Pysharkfeat is derived from an academic research on [malicious encrypted traffic
  Full features can be found in ```feat.py``` or feature JSON file.
 
  ### Environment
+- Operating systems: Linux, Mac OSX. (Windows is not supported in current version, see Known issues)
 - Language: Python3.8, 3.9  
 - Dependence: Wireshark
-
 
 ### Installation
 Install pysharkfeat from pip
@@ -105,6 +105,7 @@ You are welcome to post a issue or feature request, or send email to the author 
 ### License 
 Pysharkfeat is open source and free to use under GPL V3 license. See LICENSE for more details.
 
-
+### Known issues
+ - Running Pysharkfeat on Windows may encounter syntax parsing error with tshark, probably Windows has a different usage of ""(quotes).
 
 
