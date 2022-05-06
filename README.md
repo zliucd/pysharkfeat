@@ -95,6 +95,10 @@ Pysharkfeat is built on tshark, which may incur substantial overhead. The follow
 | 2021-01-05-PurpleFox-EK-and-post-infection-traffic.pcap  | 9.5MB     | 8                  | 11.5      |
 | 2021-01-15-Emotet-epoch-1-infection-traffic.pcap       | 5.9MB     | 40                    | 38.2      |
 | 2021-02-24-Qakbot-infection-with-spambot-traffic.pcap    | 21.1MB    | 94                 | 213.9     |
+| 20 pcaps collected from MalwareTrafficAnalsysis |    | 1503              | 3342.3    | 
+
+In the last row of the table, we tested Pysharfeat with  20 pcaps from [MalwareTrafficAnalysis](https://www.malware-traffic-analysis.net) (from Jan 2021 to Feb 2021) on a workstation using Centos8.5, CPU i7 and 32GBM RAM. It took 55 minutes to extract features.
+
 
 #### Storage
 The feature file of a single TLS stream has approximately 16KB. If a pcap has 100 TLS streams, the storage will be roughly 1.6MB.
