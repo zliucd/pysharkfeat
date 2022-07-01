@@ -1,19 +1,20 @@
-from pysharkfeat.featextractor import FeatureExtractor
-import json, os
+"""
+GPL V3 license
 
-# specify pcaps and output dir
-pcap_dir = "./pcaps/2021-01-04-Emotet-infection-with-Trickbot-traffic.pcap"
+Copyright (C) 2022 Zhi Liu<zliucd66@gmail.com>
+
+demo.py
+This file is part of Pysharkfeat, a feature extraction tool from encrypted traffic. See LICENSE for more information.
+
+"""
+
+from pysharkfeat.featextractor import FeatureExtractor
+
+# specify pcap file or pcap dir and output dir
+pcap_dir = "./pcaps/tiny_pcaps"
 output_dir="./output"
 
 extractor = FeatureExtractor(pcap_path=pcap_dir, output_dir=output_dir)
 summary = extractor.main_extract_pcaps_feat()
 
 print(summary)
-
-# read feature files
-feat_file = os.path.join(output_dir, "2021-01-04-Emotet-infection-with-Trickbot-traffic.json")
-f = open(feat_file)
-stream_feats = json.load(f)
-
-for feat in stream_feats :
-    print("%s,  stream_index:%s,  byte dist entropy:%s" % (feat["pcap_name"], feat["stream_index"], feat["bd_entropy"]))

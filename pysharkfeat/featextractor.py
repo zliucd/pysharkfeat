@@ -81,8 +81,8 @@ class FeatureExtractor:
         output["summary"] = dict()
         output["summary"]["software"] = "Pysharkfeat"
         output["summary"]["start_time"] = start_time.strftime("%Y-%m-%d, %H:%M:%s")
-        output["summary"]["end_time"] = start_time.strftime("%Y-%m-%d, %H:%M:%s")
-        output["summary"]["elapsed"] = str(elapsed_seconds) + " seconds"
+        output["summary"]["end_time"] = end_time.strftime("%Y-%m-%d, %H:%M:%s")
+        output["summary"]["elapsed"] = str(round(elapsed_seconds, 2)) + " seconds"
         output["summary"]["pcap_files"] = len(pcap_files)
         output["summary"]["TLS_stream_num"] = tls_num
 
@@ -160,7 +160,7 @@ class FeatureExtractor:
                     pkt.stream_index = int(line[4])
                     pkt.timestamp = float(line[5])
                     pkt.time_delta = float(line[6])
-                    pkt.pkt_len = float(line[7])     # in rare cases, Thsark parsing results have incorrect data
+                    pkt.pkt_len = float(line[7])     # in rare cases, tshark parsing results have incorrect data
                     pkt.payload_hex = line[8]
                     payload_formatted = pkt.payload_hex.replace(":","")
                     pkt.payload = bytes.fromhex(payload_formatted)
